@@ -1,0 +1,3147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hôtel Royal ★★★ | Paris Ivry</title>
+  <meta name="description" content="Hôtel Royal Paris Ivry — a 3-star hotel in Ivry-sur-Seine with elegant rooms, refined amenities, and practical Paris transport links.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bodoni+Moda:opsz,wght@6..96,400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8D5A3;
+      --gold-dark: #9A7830;
+      --rose: #C49A9A;
+      --rose-light: #ECDEDE;
+      --charcoal: #1A1A1A;
+      --charcoal-mid: #252525;
+      --cream: #F7F2EB;
+      --warm-gray: #EEE8DF;
+      --white: #FFFFFF;
+      --fs: 'Bodoni Moda', serif;
+      --brand: 'Great Vibes', cursive;
+      --fg: 'Cormorant Garamond', serif;
+      --fm: 'Montserrat', sans-serif;
+      --fn: 'Montserrat', sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--fm);
+      color: var(--charcoal);
+      background: var(--cream);
+      overflow-x: hidden;
+      letter-spacing: 0.01em;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    img { display: block; max-width: 100%; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ────────────────────────────────────────────
+       NAVIGATION
+    ──────────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 900;
+      padding: 1.4rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s, padding 0.4s, box-shadow 0.4s;
+    }
+
+    #navbar.scrolled {
+      background: rgba(26,26,26,0.97);
+      backdrop-filter: blur(14px);
+      padding: 0.9rem 3rem;
+      box-shadow: 0 2px 40px rgba(0,0,0,0.35);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+
+    .nav-logo-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.08rem;
+      white-space: nowrap;
+    }
+
+    .nav-logo-name {
+      font-family: var(--fs);
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 0.95;
+    }
+
+    .nav-logo-place {
+      display: flex;
+      align-items: center;
+      gap: 0.46rem;
+      font-family: var(--fn);
+      font-size: 0.48rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      line-height: 1;
+    }
+
+    .nav-logo-stars {
+      font-family: var(--fn);
+      font-size: 0.5rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--fn);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-book {
+      background: var(--gold) !important;
+      color: var(--charcoal) !important;
+      padding: 0.72rem 1.75rem;
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+      font-weight: 700 !important;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s !important;
+    }
+
+    .nav-book::after { display: none !important; }
+    .nav-book:hover {
+      background: var(--white) !important;
+      border-color: var(--gold);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px; height: 2px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    /* ────────────────────────────────────────────
+       MOBILE MENU
+    ──────────────────────────────────────────── */
+    #mobileMenu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--charcoal);
+      z-index: 950;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    #mobileMenu.open { display: flex; }
+
+    #mobileMenu a {
+      font-family: var(--fs);
+      font-size: 2.5rem;
+      color: var(--white);
+      transition: color 0.3s;
+    }
+
+    #mobileMenu a:hover { color: var(--gold); }
+
+    .m-close {
+      position: absolute;
+      top: 1.8rem; right: 2rem;
+      background: none; border: none;
+      color: var(--white);
+      font-size: 1.6rem;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+
+    .m-close:hover { opacity: 1; }
+
+    /* ────────────────────────────────────────────
+       HERO
+    ──────────────────────────────────────────── */
+    #hero {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-slides,
+    .hero-video { position: absolute; inset: 0; }
+
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .h-slide {
+      position: absolute; inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.8s ease;
+      animation: kb 12s ease-in-out infinite alternate;
+    }
+
+    .h-slide.on { opacity: 1; }
+
+    @keyframes kb {
+      from { transform: scale(1); }
+      to   { transform: scale(1.07); }
+    }
+
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(0,0,0,0.25) 0%,
+        rgba(0,0,0,0.45) 55%,
+        rgba(0,0,0,0.65) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: var(--white);
+      padding: 0 1.5rem;
+      max-width: 860px;
+    }
+
+    .hero-location {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      font-family: var(--fn);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.86);
+      border-top: 1px solid rgba(255,255,255,0.24);
+      border-bottom: 1px solid rgba(255,255,255,0.24);
+      padding: 0.65rem 0.9rem;
+      margin: 1.15rem auto 1.8rem;
+      opacity: 0;
+      animation: fadeUp 1s 1.2s forwards;
+    }
+
+    .hero-location i {
+      color: var(--gold-light);
+      font-size: 0.72rem;
+    }
+
+    .hero-location-divider {
+      width: 3px;
+      height: 3px;
+      background: var(--gold-light);
+      transform: rotate(45deg);
+      opacity: 0.8;
+    }
+
+    .h-title {
+      font-family: var(--fs);
+      font-size: clamp(3rem, 6vw, 5.1rem);
+      line-height: 1;
+      margin-bottom: 0.9rem;
+      opacity: 0;
+      animation: fadeUp 1s 0.55s forwards;
+      letter-spacing: -0.04em;
+    }
+
+    .h-tag {
+      font-family: var(--fn);
+      font-size: clamp(0.86rem, 1.6vw, 0.98rem);
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 0.35rem;
+      opacity: 0;
+      animation: fadeUp 1s 0.9s forwards;
+    }
+
+    .h-btns {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 1s 1.6s forwards;
+    }
+
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--charcoal);
+      padding: 1.18rem 3.15rem;
+      font-family: var(--fn);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.22);
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+
+    .btn-gold:hover {
+      background: var(--white);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    }
+
+    .btn-outline-w {
+      display: inline-block;
+      background: rgba(255,255,255,0.04);
+      color: var(--white);
+      padding: 1.18rem 3.15rem;
+      font-family: var(--fn);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+      cursor: pointer;
+      transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.25s;
+    }
+
+    .btn-outline-w:hover {
+      background: rgba(201,168,76,0.12);
+      border-color: var(--gold);
+      color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .hero-scroll-cue {
+      position: absolute;
+      bottom: 2.2rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      color: rgba(255,255,255,0.6);
+      font-family: var(--fn);
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeIn 1.5s 2.2s forwards;
+    }
+
+    .scroll-bar {
+      width: 1px; height: 46px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollAnim 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollAnim {
+      0%,100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .hero-dots { display: none; }
+
+    .hdot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.35);
+      cursor: pointer;
+      transition: all 0.35s;
+      border: none;
+    }
+
+    .hdot.on { background: var(--gold); width: 26px; border-radius: 4px; }
+
+    /* ────────────────────────────────────────────
+       HELPERS
+    ──────────────────────────────────────────── */
+    section { padding: 7rem 0; }
+
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+
+    .sec-label {
+      display: block;
+      font-family: var(--fn);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.7rem;
+    }
+
+    .sec-title {
+      font-family: var(--fs);
+      font-size: clamp(2.4rem, 4.6vw, 3.9rem);
+      line-height: 1.05;
+      color: var(--charcoal);
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.035em;
+    }
+
+    .sec-title.light { color: var(--white); }
+
+    .divider {
+      height: 2px;
+      width: 55px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 2rem;
+    }
+
+    .divider.c {
+      margin: 0 auto 2rem;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      width: 110px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+
+    .fade-in.vis { opacity: 1; transform: none; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* ────────────────────────────────────────────
+       BOOKING BANNER
+    ──────────────────────────────────────────── */
+    .book-banner {
+      background: var(--gold);
+      padding: 1.4rem 0;
+    }
+
+    .book-banner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .book-banner p {
+      font-family: var(--fg);
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--charcoal);
+    }
+
+    .btn-dark {
+      display: inline-block;
+      background: var(--charcoal);
+      color: var(--gold);
+      padding: 0.95rem 2.3rem;
+      font-family: var(--fn);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border: 1px solid rgba(201,168,76,0.28);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+
+    .btn-dark:hover {
+      background: var(--white);
+      color: var(--charcoal);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.16);
+    }
+
+    /* ────────────────────────────────────────────
+       ABOUT
+    ──────────────────────────────────────────── */
+    #about { background: var(--white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-family: var(--fg);
+      font-size: 1.05rem;
+      line-height: 1.95;
+      color: #4e4a45;
+      margin-bottom: 1.4rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2.8rem;
+      padding-top: 2.8rem;
+      border-top: 1px solid var(--rose-light);
+    }
+
+    .stat { text-align: center; }
+
+    .stat-n {
+      font-family: var(--fs);
+      font-size: 2.6rem;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-l {
+      font-family: var(--fn);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #AAA;
+      margin-top: 0.3rem;
+      display: block;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-frame {
+      position: absolute;
+      top: -18px; right: -18px;
+      bottom: 18px; left: 18px;
+      border: 1.5px solid var(--gold);
+      pointer-events: none;
+    }
+
+    .about-img-wrap img {
+      position: relative;
+      width: 100%;
+      height: 580px;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: -1rem; left: -1rem;
+      background: var(--gold);
+      color: var(--charcoal);
+      padding: 1.3rem 1.6rem;
+      text-align: center;
+      z-index: 2;
+      min-width: 110px;
+    }
+
+    .badge-n {
+      font-family: var(--fs);
+      font-size: 2.2rem;
+      line-height: 1;
+      display: block;
+    }
+
+    .badge-t {
+      font-family: var(--fn);
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    /* ────────────────────────────────────────────
+       ROOMS
+    ──────────────────────────────────────────── */
+    #rooms { background: var(--cream); }
+
+    .rooms-head { text-align: center; margin-bottom: 4rem; }
+
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .room-card {
+      background: var(--white);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .room-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.13);
+    }
+
+    .room-img {
+      position: relative;
+      height: 290px;
+      overflow: hidden;
+    }
+
+    .room-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.65s ease;
+    }
+
+    .room-card:hover .room-img img { transform: scale(1.08); }
+
+    .room-tag {
+      position: absolute;
+      top: 1.3rem; left: 1.3rem;
+      background: var(--gold);
+      color: var(--charcoal);
+      font-family: var(--fn);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+    }
+
+    .room-body { padding: 2rem; }
+
+    .room-name {
+      font-family: var(--fs);
+      font-size: 1.9rem;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .room-meta {
+      display: flex; gap: 1.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .room-meta span {
+      font-family: var(--fn);
+      font-size: 0.6rem;
+      color: #AAA;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .room-meta span i { color: var(--rose); }
+
+    .room-desc {
+      font-family: var(--fg);
+      font-size: 1.05rem;
+      line-height: 1.95;
+      color: #4e4a45;
+      margin-bottom: 1.4rem;
+    }
+
+    .room-chips {
+      display: flex; flex-wrap: wrap; gap: 0.45rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .room-chips span {
+      font-family: var(--fn);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      border: 1px solid var(--rose-light);
+      padding: 0.28rem 0.7rem;
+    }
+
+    .room-link {
+      font-family: var(--fn);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid rgba(201,168,76,0.55);
+      padding-bottom: 0.35rem;
+      transition: gap 0.25s, color 0.25s, border-color 0.25s;
+    }
+
+    .room-link:hover {
+      gap: 0.85rem;
+      color: var(--gold-dark);
+      border-color: var(--gold-dark);
+    }
+
+    /* ────────────────────────────────────────────
+       BREAKFAST
+    ──────────────────────────────────────────── */
+    #breakfast {
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bk-bg {
+      position: absolute; inset: 0;
+      background-image: url('Photos/HotelRoyal-1.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+    }
+
+    .bk-inner {
+      position: relative; z-index: 1;
+    }
+
+    .bk-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .bk-text .sec-title { color: var(--white); }
+
+    .bk-times {
+      display: flex; gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .bk-time-box {
+      border: 1px solid rgba(201,168,76,0.35);
+      padding: 1.1rem 1.8rem;
+      text-align: center;
+      flex: 1;
+    }
+
+    .bk-val {
+      font-family: var(--fs);
+      font-size: 2rem;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+
+    .bk-lbl {
+      font-family: var(--fn);
+      font-size: 0.56rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.25rem;
+      display: block;
+    }
+
+    .bk-desc {
+      font-family: var(--fg);
+      font-size: 1.02rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.68);
+    }
+
+    .bk-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .menu-box {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.18);
+      min-height: 210px;
+    }
+
+    .menu-box img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+
+    .menu-box::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13,13,13,0.15), rgba(13,13,13,0.78));
+    }
+
+    .menu-box-copy {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      padding: 1.35rem;
+    }
+
+    .menu-box-title {
+      font-family: var(--fn);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 0.7rem;
+    }
+
+    .menu-box p {
+      font-family: var(--fg);
+      font-size: 1rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.82);
+    }
+
+    /* ────────────────────────────────────────────
+       AMENITIES
+    ──────────────────────────────────────────── */
+    #amenities { background: var(--white); }
+
+    .am-head { text-align: center; margin-bottom: 4rem; }
+
+    .am-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .am-item {
+      text-align: center;
+      padding: 2.4rem 1.2rem;
+      border: 1px solid var(--rose-light);
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    .am-item:hover {
+      border-color: var(--gold);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(201,168,76,0.12);
+    }
+
+    .am-icon {
+      width: 54px; height: 54px;
+      background: var(--warm-gray);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+      transition: background 0.3s;
+    }
+
+    .am-item:hover .am-icon { background: var(--gold); }
+
+    .am-icon i {
+      font-size: 1.1rem;
+      color: var(--rose);
+      transition: color 0.3s;
+    }
+
+    .am-item:hover .am-icon i { color: var(--charcoal); }
+
+    .am-name {
+      font-family: var(--fn);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+    }
+
+    /* ────────────────────────────────────────────
+       GALLERY
+    ──────────────────────────────────────────── */
+    #gallery { background: var(--cream); padding-bottom: 5rem; }
+
+    .gallery-head { text-align: center; margin-bottom: 3rem; }
+
+    #galleryGrid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .g-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      cursor: pointer;
+      grid-column: span 3;
+    }
+
+    .g-item:nth-child(1) {
+      grid-column: span 6;
+      grid-row: span 2;
+      aspect-ratio: unset;
+    }
+
+    .g-item:nth-child(4) {
+      grid-column: span 6;
+      aspect-ratio: 16 / 9;
+    }
+
+    .g-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .g-item:hover img { transform: scale(1.07); }
+
+    .g-overlay {
+      position: absolute; inset: 0;
+      background: rgba(26,26,26,0);
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .g-item:hover .g-overlay { background: rgba(26,26,26,0.38); }
+
+    .g-overlay i {
+      color: var(--white);
+      font-size: 1.4rem;
+      opacity: 0;
+      transform: scale(0.6);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .g-item:hover .g-overlay i { opacity: 1; transform: scale(1); }
+
+    .gallery-more { display: none; }
+
+    /* ────────────────────────────────────────────
+       LIGHTBOX
+    ──────────────────────────────────────────── */
+    #lightbox {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.96);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #lightbox.open { display: flex; }
+
+    #lbImg {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+
+    .lb-close {
+      position: absolute;
+      top: 1.5rem; right: 1.8rem;
+      background: none; border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .lb-close:hover { color: var(--gold); }
+
+    .lb-nav {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      border: none;
+      width: 50px; height: 50px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .lb-nav:hover { background: rgba(201,168,76,0.55); }
+    .lb-prev { left: 1rem; }
+    .lb-next { right: 1rem; }
+
+    /* ────────────────────────────────────────────
+       LOCATION
+    ──────────────────────────────────────────── */
+    #location { padding: 0; }
+
+    .loc-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .loc-info {
+      background: var(--charcoal);
+      padding: 6rem 4rem;
+    }
+
+    .loc-info .sec-title { color: var(--white); }
+
+    .loc-info > p {
+      font-family: var(--fm);
+      font-size: 0.9rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 2rem;
+    }
+
+    .loc-list { list-style: none; margin-bottom: 2.5rem; }
+
+    .loc-list li {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .loc-list li i {
+      color: var(--gold);
+      width: 16px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .loc-list li span,
+    .loc-list li a {
+      font-family: var(--fm);
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.6;
+    }
+
+    .loc-list li a:hover { color: var(--gold); }
+
+    .transport { margin-top: 1.5rem; }
+
+    .t-item {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .t-icon {
+      width: 36px; height: 36px;
+      background: rgba(201,168,76,0.18);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .t-icon i { color: var(--gold); font-size: 0.85rem; }
+
+    .t-text {
+      font-family: var(--fm);
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+    }
+
+    .t-text strong {
+      font-family: var(--fn);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .map-wrap {
+      min-height: 540px;
+    }
+
+    .map-wrap iframe {
+      width: 100%; height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ────────────────────────────────────────────
+       NEARBY
+    ──────────────────────────────────────────── */
+    #nearby { background: var(--cream); }
+
+    .nb-head { text-align: center; margin-bottom: 3rem; }
+
+    .nb-tabs {
+      display: flex; justify-content: center; gap: 0.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .nb-tab {
+      font-family: var(--fn);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.6rem;
+      background: transparent;
+      border: 1px solid var(--rose-light);
+      cursor: pointer;
+      color: #999;
+      transition: all 0.3s;
+    }
+
+    .nb-tab.on {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--charcoal);
+    }
+
+    .nb-panel { display: none; }
+    .nb-panel.on { display: block; }
+
+    .nb-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.4rem;
+    }
+
+    .nb-card {
+      background: var(--white);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 3px solid transparent;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .nb-card:hover {
+      transform: translateY(-6px);
+      border-bottom-color: var(--gold);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    .nb-icon {
+      width: 48px; height: 48px;
+      background: var(--warm-gray);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .nb-icon i { color: var(--gold); font-size: 1rem; }
+
+    .nb-name {
+      font-family: var(--fg);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .nb-desc {
+      font-family: var(--fm);
+      font-size: 0.76rem;
+      color: #AAA;
+      line-height: 1.65;
+    }
+
+    /* ────────────────────────────────────────────
+       CONTACT
+    ──────────────────────────────────────────── */
+    #contact { background: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .c-detail {
+      display: flex; gap: 1rem; align-items: flex-start;
+      margin-bottom: 1.65rem;
+    }
+
+    .c-icon {
+      width: 46px; height: 46px;
+      background: var(--warm-gray);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .c-icon i { color: var(--gold); }
+
+    .c-text {
+      font-family: var(--fm);
+      font-size: 0.96rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .c-text strong {
+      font-family: var(--fn);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #BBB;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .c-text a { color: var(--gold-dark); }
+    .c-text a:hover { color: var(--gold); }
+
+    .socials {
+      display: flex; gap: 0.7rem;
+      margin-top: 2rem;
+    }
+
+    .soc-link {
+      width: 40px; height: 40px;
+      background: var(--warm-gray);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--charcoal);
+      font-size: 0.9rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .soc-link:hover { background: var(--gold); color: var(--charcoal); }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+      background: var(--warm-gray);
+      padding: 2.35rem;
+    }
+
+    .f-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .f-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .f-group label {
+      font-family: var(--fn);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #BBB;
+    }
+
+    .f-group input,
+    .f-group textarea,
+    .f-group select {
+      font-family: var(--fm);
+      font-size: 0.92rem;
+      color: var(--charcoal);
+      background: var(--warm-gray);
+      border: 1px solid transparent;
+      padding: 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.3s, background 0.3s;
+      width: 100%;
+      appearance: none;
+    }
+
+    .f-group input:focus,
+    .f-group textarea:focus,
+    .f-group select:focus {
+      border-color: var(--gold);
+      background: var(--white);
+    }
+
+    .f-group textarea { height: 118px; resize: vertical; }
+
+    .btn-submit {
+      background: var(--gold);
+      color: var(--charcoal);
+      border: 1px solid rgba(26,26,26,0.08);
+      padding: 1.15rem 3rem;
+      font-family: var(--fn);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      align-self: flex-start;
+    }
+
+    #booking .sec-title {
+      font-size: clamp(2.8rem, 5vw, 4.35rem);
+    }
+
+    #contact .sec-title {
+      font-size: clamp(2.7rem, 4.5vw, 4.1rem);
+    }
+
+    .btn-submit:hover {
+      background: var(--charcoal);
+      color: var(--gold-light);
+      border-color: var(--charcoal);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.15);
+    }
+
+    /* ────────────────────────────────────────────
+       FOOTER
+    ──────────────────────────────────────────── */
+    footer {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 4.5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-logo-name {
+      font-family: var(--fs);
+      font-size: 2.15rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 0.95;
+    }
+
+    .footer-logo-place {
+      display: flex;
+      align-items: center;
+      gap: 0.58rem;
+      font-family: var(--fn);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.64);
+      line-height: 1;
+    }
+
+    .footer-logo-stars {
+      font-family: var(--fn);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .footer-brand p {
+      font-family: var(--fm);
+      font-size: 0.8rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+      display: flex; gap: 0.7rem;
+    }
+
+    .footer-social a {
+      width: 35px; height: 35px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.8rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .footer-social a:hover { background: var(--gold); color: var(--charcoal); }
+
+    .footer-col h4 {
+      font-family: var(--fn);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li {
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-col ul li a {
+      font-family: var(--fm);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.3s;
+    }
+
+    .footer-col ul li a:hover { color: var(--gold); }
+
+    .footer-col p {
+      font-family: var(--fm);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.85;
+    }
+
+    .footer-col p a {
+      color: rgba(255,255,255,0.45);
+      transition: color 0.3s;
+    }
+
+    .footer-col p a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .footer-bottom p {
+      font-family: var(--fm);
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-langs {
+      display: flex; gap: 0.9rem; flex-wrap: wrap;
+    }
+
+    .footer-langs a {
+      font-family: var(--fn);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      transition: color 0.3s;
+    }
+
+    .footer-langs a:hover { color: var(--gold); }
+
+    /* ────────────────────────────────────────────
+       BOOKING
+    ──────────────────────────────────────────── */
+    #booking { background: var(--cream); }
+
+    .booking-wrap {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* ── Step labels ── */
+    .bk-step-label {
+      font-family: var(--fn);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .bk-step-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rose-light);
+    }
+
+    /* ── Date row ── */
+    .bk-dates {
+      display: grid;
+      grid-template-columns: 1fr 1fr 120px;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .bk-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .bk-field label {
+      font-family: var(--fn);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #bbb;
+    }
+
+    .bk-field input,
+    .bk-field select {
+      font-family: var(--fm);
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      background: var(--white);
+      border: 1px solid var(--rose-light);
+      padding: 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+      width: 100%;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .bk-field input:focus,
+    .bk-field select:focus { border-color: var(--gold); }
+
+    .nights-box {
+      background: var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem;
+      text-align: center;
+    }
+
+    .nights-num {
+      font-family: var(--fs);
+      font-size: 2.2rem;
+      color: var(--charcoal);
+      line-height: 1;
+      display: block;
+    }
+
+    .nights-lbl {
+      font-family: var(--fn);
+      font-size: 0.54rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      opacity: 0.75;
+      margin-top: 0.2rem;
+      display: block;
+    }
+
+    /* ── Room type cards ── */
+    .room-picker {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .rp-card {
+      border: 2px solid var(--rose-light);
+      cursor: pointer;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rp-card.selected {
+      border-color: var(--gold);
+      box-shadow: 0 6px 24px rgba(201,168,76,0.2);
+    }
+
+    .rp-card img {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .rp-card:hover img { transform: scale(1.06); }
+
+    .rp-check {
+      position: absolute;
+      top: 0.5rem; right: 0.5rem;
+      width: 22px; height: 22px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rp-card.selected .rp-check { display: flex; }
+
+    .rp-check i { color: var(--charcoal); font-size: 0.6rem; }
+
+    .rp-info { padding: 0.75rem; }
+
+    .rp-name {
+      font-family: var(--fg);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 0.15rem;
+    }
+
+    .rp-cap {
+      font-family: var(--fn);
+      font-size: 0.55rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 0.3rem;
+    }
+
+    .rp-price {
+      font-family: var(--fm);
+      font-size: 0.78rem;
+      color: var(--gold-dark);
+      font-weight: 700;
+    }
+
+    /* ── Guests row ── */
+    .bk-guests {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .guest-counter {
+      background: var(--white);
+      border: 1px solid var(--rose-light);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .gc-label {
+      font-family: var(--fn);
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #bbb;
+    }
+
+    .gc-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .gc-btn {
+      width: 30px; height: 30px;
+      background: var(--warm-gray);
+      border: none;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--charcoal);
+      transition: background 0.2s;
+      font-family: var(--fn);
+    }
+
+    .gc-btn:hover { background: var(--gold); }
+
+    .gc-val {
+      font-family: var(--fs);
+      font-size: 1.9rem;
+      color: var(--charcoal);
+      min-width: 28px;
+      text-align: center;
+      line-height: 1;
+    }
+
+    /* ── Extras ── */
+    .bk-extras {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .extra-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: var(--white);
+      border: 1px solid var(--rose-light);
+      padding: 0.9rem 1.2rem;
+      cursor: pointer;
+      transition: border-color 0.3s;
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .extra-toggle.on { border-color: var(--gold); }
+
+    .toggle-switch {
+      width: 36px; height: 20px;
+      background: var(--rose-light);
+      border-radius: 10px;
+      position: relative;
+      flex-shrink: 0;
+      transition: background 0.3s;
+    }
+
+    .extra-toggle.on .toggle-switch { background: var(--gold); }
+
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 3px; left: 3px;
+      width: 14px; height: 14px;
+      background: var(--white);
+      border-radius: 50%;
+      transition: left 0.3s;
+    }
+
+    .extra-toggle.on .toggle-switch::after { left: 19px; }
+
+    .extra-text { flex: 1; }
+
+    .extra-name {
+      font-family: var(--fn);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      display: block;
+    }
+
+    .extra-desc {
+      font-family: var(--fm);
+      font-size: 0.72rem;
+      color: #bbb;
+      margin-top: 0.1rem;
+    }
+
+    /* ── Guest details ── */
+    .bk-details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .bk-details-grid .full { grid-column: span 2; }
+
+    /* ── Arrival time & requests ── */
+    .bk-field textarea {
+      font-family: var(--fm);
+      font-size: 0.92rem;
+      color: var(--charcoal);
+      background: var(--white);
+      border: 1px solid var(--rose-light);
+      padding: 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+      width: 100%;
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .bk-field textarea:focus { border-color: var(--gold); }
+
+    /* ── Summary panel ── */
+    .booking-summary-panel {
+      position: sticky;
+      top: 90px;
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 2.5rem;
+    }
+
+    .bsp-title {
+      font-family: var(--fs);
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+
+    .bsp-sub {
+      font-family: var(--fn);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 2rem;
+    }
+
+    .bsp-room-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    .bsp-room-name {
+      font-family: var(--fg);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .bsp-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      gap: 0.5rem;
+    }
+
+    .bsp-row-label {
+      font-family: var(--fm);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      flex: 1;
+    }
+
+    .bsp-row-val {
+      font-family: var(--fm);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.9);
+      text-align: right;
+    }
+
+    .bsp-total {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .bsp-total-label {
+      font-family: var(--fn);
+      font-size: 0.74rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .bsp-total-val {
+      font-family: var(--fs);
+      font-size: 2.4rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .bsp-tax-note {
+      font-family: var(--fm);
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .bsp-submit {
+      margin-top: 2rem;
+      width: 100%;
+      background: var(--gold);
+      color: var(--charcoal);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 1.15rem;
+      font-family: var(--fn);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.24);
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+
+    .bsp-submit:hover {
+      background: var(--white);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.3);
+    }
+
+    .bsp-note {
+      font-family: var(--fm);
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ── Confirmation overlay ── */
+    #bk-confirm {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 9000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #bk-confirm.open { display: flex; }
+
+    .bk-confirm-box {
+      background: var(--white);
+      max-width: 520px;
+      width: 90%;
+      padding: 3.5rem;
+      text-align: center;
+    }
+
+    .bk-confirm-icon {
+      width: 64px; height: 64px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .bk-confirm-icon i { color: var(--charcoal); font-size: 1.5rem; }
+
+    .bk-confirm-box h3 {
+      font-family: var(--fs);
+      font-size: 2.5rem;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .bk-confirm-box p {
+      font-family: var(--fm);
+      font-size: 0.9rem;
+      color: #888;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .bk-confirm-ref {
+      font-family: var(--fn);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 0.3rem;
+    }
+
+    .bk-confirm-num {
+      font-family: var(--fs);
+      font-size: 2rem;
+      color: var(--gold);
+    }
+
+    @media (max-width: 1100px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .booking-wrap { grid-template-columns: 1fr; }
+      .booking-summary-panel { position: static; }
+      .room-picker { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .bk-dates { grid-template-columns: 1fr 1fr; }
+      .nights-box { display: none; }
+      .bk-guests { grid-template-columns: repeat(2, 1fr); }
+      .bk-details-grid { grid-template-columns: 1fr; }
+      .bk-details-grid .full { grid-column: span 1; }
+    }
+
+    /* ────────────────────────────────────────────
+       RESPONSIVE
+    ──────────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .about-grid { gap: 3.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .am-grid { grid-template-columns: repeat(3, 1fr); }
+      .nb-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 800px) {
+      section { padding: 5rem 0; }
+      #navbar { padding: 1rem 1.5rem; }
+      #navbar.scrolled { padding: 0.8rem 1.5rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .about-grid,
+      .bk-grid,
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+      .rooms-grid { grid-template-columns: 1fr; }
+
+      .loc-inner { grid-template-columns: 1fr; }
+      .map-wrap { min-height: 300px; }
+
+      #galleryGrid { grid-template-columns: repeat(2, 1fr); padding: 0 1rem; }
+      .g-item,
+      .g-item:nth-child(1),
+      .g-item:nth-child(4) { grid-column: span 1; grid-row: span 1; aspect-ratio: 4 / 5; }
+      .g-item:nth-child(9n+1),
+      .g-item:nth-child(9n+5) {
+        grid-column: span 1;
+        grid-row: span 1;
+        aspect-ratio: 1;
+      }
+
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      .am-grid { grid-template-columns: repeat(2, 1fr); }
+      .nb-grid { grid-template-columns: 1fr 1fr; }
+
+      .h-btns { flex-direction: column; align-items: center; }
+      .hero-location {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0.25rem 0.55rem;
+        padding: 0.65rem 1rem;
+        line-height: 1.35;
+      }
+      .hero-location i { grid-row: span 2; align-self: center; }
+      .hero-location-divider { display: none; }
+      .f-row { grid-template-columns: 1fr; }
+      .bk-menu { grid-template-columns: 1fr; }
+      .book-banner-inner { flex-direction: column; text-align: center; }
+
+      .about-img-frame { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <span class="nav-logo-copy">
+      <span class="nav-logo-stars" aria-label="Three-star hotel">★★★</span>
+      <span class="nav-logo-name">Hôtel Royal</span>
+      <span class="nav-logo-place">
+        <span>Paris</span>
+        <span>Ivry</span>
+      </span>
+    </span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#breakfast">Breakfast</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#booking">Book</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#booking" class="nav-book">Book Your Stay</a></li>
+  </ul>
+
+  <button class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════ MOBILE MENU ══════════════════ -->
+<div id="mobileMenu">
+  <button class="m-close" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+  <a href="#about"     onclick="toggleMenu()">About</a>
+  <a href="#rooms"     onclick="toggleMenu()">Rooms</a>
+  <a href="#breakfast" onclick="toggleMenu()">Breakfast</a>
+  <a href="#gallery"   onclick="toggleMenu()">Gallery</a>
+  <a href="#location"  onclick="toggleMenu()">Location</a>
+  <a href="#booking"   onclick="toggleMenu()" style="color:var(--gold)">Book Your Stay</a>
+  <a href="#contact"   onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section id="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="Photos/HotelRoyal-54.jpg">
+    <source src="media/hero-banner.web.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="h-title">Hôtel Royal</h1>
+    <p class="h-tag">In Paris</p>
+    <div class="hero-location">
+      <i class="fas fa-location-dot" aria-hidden="true"></i>
+      <span>80 Avenue Jean Jaurès</span>
+      <span class="hero-location-divider" aria-hidden="true"></span>
+      <span>Ivry-sur-Seine</span>
+    </div>
+    <div class="h-btns">
+      <a href="https://www.hotelroyalparis.com" target="_blank" class="btn-gold">Book Your Stay</a>
+      <a href="#about" class="btn-outline-w">Discover the Hotel</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    <div class="scroll-bar"></div>
+    <span>Scroll</span>
+  </div>
+
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<!-- ══════════════════ BOOKING BANNER ══════════════════ -->
+<div class="book-banner">
+  <div class="container">
+    <div class="book-banner-inner">
+      <p>A more elegant stay in Paris, with generous rooms, direct booking, and practical transport connections.</p>
+      <a href="https://www.hotelroyalparis.com" target="_blank" class="btn-dark">Book Your Stay</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ ABOUT ══════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <span class="sec-label">Welcome</span>
+        <h2 class="sec-title">A Royal Welcome<br>In Paris</h2>
+        <div class="divider"></div>
+        <p>Set in Ivry-sur-Seine, 7 Km du centre de Paris, Hôtel Royal pairs classical detailing with a calmer, more discreet hospitality style. Gilded accents, chandeliers, and quiet lounges create an atmosphere that feels distinctive without becoming theatrical.</p>
+        <p>With nearby metro, RER, and bus connections, the hotel offers a more practical Paris stay: close enough to move through the city easily, yet removed enough to return each evening to a quieter rhythm.</p>
+        <p>Whether you are here for a romantic escape, a family adventure, or a business stay, we are honoured to be your home in Paris.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-n">7 Km</span>
+            <span class="stat-l">du centre de Paris</span>
+          </div>
+          <div class="stat">
+            <span class="stat-n">4</span>
+            <span class="stat-l">Room Types</span>
+          </div>
+          <div class="stat">
+            <span class="stat-n">24h</span>
+            <span class="stat-l">Front Desk</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-img-wrap fade-in">
+        <div class="about-img-frame"></div>
+        <img src="Photos/HotelRoyal-80.jpg" alt="Hotel Royal Paris — Grand Lobby">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ ROOMS ══════════════════ -->
+<section id="rooms">
+  <div class="container">
+    <div class="rooms-head fade-in">
+      <span class="sec-label">Accommodations</span>
+      <h2 class="sec-title">Our Rooms &amp; Suites</h2>
+      <div class="divider c"></div>
+      <p style="font-family:var(--fg);color:#8e867c;max-width:580px;margin:0 auto;font-size:1.2rem;line-height:1.7;">Elegant proportions, warm details, and practical comfort come together across each room and suite.</p>
+    </div>
+
+    <div class="rooms-grid">
+      <!-- Double Deluxe -->
+      <div class="room-card fade-in">
+        <div class="room-img">
+          <span class="room-tag">Double Room</span>
+          <img src="Photos/HotelRoyal-97.jpg" alt="Double Deluxe Room">
+        </div>
+        <div class="room-body">
+          <h3 class="room-name">Double Deluxe</h3>
+          <div class="room-meta">
+            <span><i class="fas fa-user"></i> Up to 2 Guests</span>
+            <span><i class="fas fa-bed"></i> 1 Double Bed</span>
+          </div>
+          <p class="room-desc">A more intimate room designed around quiet comfort: layered textures, softer light, and a composed atmosphere that feels restful from the moment you arrive.</p>
+          <div class="room-chips">
+            <span>Animals not accepted</span><span>Smart TV</span><span>Minibar</span><span>PMR Access</span>
+          </div>
+          <a href="https://www.hotelroyalparis.com" target="_blank" class="room-link">Book Your Stay <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Twin Room -->
+      <div class="room-card fade-in">
+        <div class="room-img">
+          <span class="room-tag">Twin Room</span>
+          <img src="Photos/HotelRoyal-150.jpg" alt="Twin Room">
+        </div>
+        <div class="room-body">
+          <h3 class="room-name">Twin Room</h3>
+          <div class="room-meta">
+            <span><i class="fas fa-user"></i> Up to 2 Guests</span>
+            <span><i class="fas fa-bed"></i> 2 Twin Beds</span>
+          </div>
+          <p class="room-desc">Ideal for friends or colleagues, this room balances practical comfort with a more refined visual rhythm, from lighter finishes to gentler evening lighting.</p>
+          <div class="room-chips">
+            <span>Animals not accepted</span><span>Smart TV</span><span>Minibar</span><span>PMR Access</span>
+          </div>
+          <a href="https://www.hotelroyalparis.com" target="_blank" class="room-link">Book Your Stay <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Triple Room -->
+      <div class="room-card fade-in">
+        <div class="room-img">
+          <span class="room-tag">Triple Deluxe</span>
+          <img src="Photos/HotelRoyal-166.jpg" alt="Triple Room">
+        </div>
+        <div class="room-body">
+          <h3 class="room-name">Triple Room</h3>
+          <div class="room-meta">
+            <span><i class="fas fa-user"></i> Up to 3 Guests</span>
+            <span><i class="fas fa-bed"></i> 2 Twin + 1 Single</span>
+          </div>
+          <p class="room-desc">Designed for families or small groups, the Triple Room offers more space without losing its elegance, with a clearer layout and a warmer, more settled atmosphere.</p>
+          <div class="room-chips">
+            <span>Animals not accepted</span><span>Smart TV</span><span>Minibar</span><span>PMR Access</span>
+          </div>
+          <a href="https://www.hotelroyalparis.com" target="_blank" class="room-link">Book Your Stay <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Suite Deluxe -->
+      <div class="room-card fade-in">
+        <div class="room-img">
+          <span class="room-tag">Suite</span>
+          <img src="Photos/HotelRoyal-210.jpg" alt="Suite Deluxe">
+        </div>
+        <div class="room-body">
+          <h3 class="room-name">Suite Deluxe</h3>
+          <div class="room-meta">
+            <span><i class="fas fa-user"></i> Up to 4 Guests</span>
+            <span><i class="fas fa-bed"></i> 2 Double Beds</span>
+          </div>
+          <p class="room-desc">The Suite Deluxe remains the most spacious option, now described with a more premium editorial tone that emphasizes scale, comfort, and a calmer luxury.</p>
+          <div class="room-chips">
+            <span>Animals not accepted</span><span>Smart TV</span><span>Minibar</span><span>PMR Access</span>
+          </div>
+          <a href="https://www.hotelroyalparis.com" target="_blank" class="room-link">Book Your Stay <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ BREAKFAST ══════════════════ -->
+<section id="breakfast">
+  <div class="bk-bg"></div>
+  <div class="bk-inner">
+    <div class="container">
+      <div class="bk-grid">
+        <div class="bk-text fade-in">
+          <span class="sec-label">Morning Ritual</span>
+          <h2 class="sec-title">Breakfast<br>Buffet</h2>
+          <div class="divider"></div>
+          <div class="bk-times">
+            <div class="bk-time-box">
+              <span class="bk-val">7:00</span>
+              <span class="bk-lbl">Opens</span>
+            </div>
+            <div class="bk-time-box">
+              <span class="bk-val">10:30</span>
+              <span class="bk-lbl">Last service</span>
+            </div>
+            <div class="bk-time-box">
+              <span class="bk-val">€15</span>
+              <span class="bk-lbl">Per adult</span>
+            </div>
+            <div class="bk-time-box">
+              <span class="bk-val">€7</span>
+              <span class="bk-lbl">Per child</span>
+            </div>
+          </div>
+          <p class="bk-desc">Enjoy a generous continental buffet each morning, served in a warm and elegant setting before you begin your day in Paris.</p>
+        </div>
+
+        <div class="bk-menu fade-in">
+          <div class="menu-box">
+            <img src="Photos/HotelRoyal-1.jpg" alt="Breakfast atmosphere">
+            <div class="menu-box-copy">
+              <div class="menu-box-title">Morning atmosphere</div>
+              <p>A bright and welcoming breakfast room designed for a calm start to the day.</p>
+            </div>
+          </div>
+          <div class="menu-box">
+            <img src="Photos/HotelRoyal-54.jpg" alt="Breakfast room detail">
+            <div class="menu-box-copy">
+              <div class="menu-box-title">Continental classics</div>
+              <p>Fresh pastries, fruit, hot drinks, and the classic essentials of a Paris morning.</p>
+            </div>
+          </div>
+          <div class="menu-box">
+            <img src="Photos/HotelRoyal-80.jpg" alt="Dining room detail">
+            <div class="menu-box-copy">
+              <div class="menu-box-title">A calmer setting</div>
+              <p>A relaxed setting where breakfast can be enjoyed at an easy and comfortable pace.</p>
+            </div>
+          </div>
+          <div class="menu-box">
+            <img src="Photos/HotelRoyal-172.jpg" alt="Breakfast visual">
+            <div class="menu-box-copy">
+              <div class="menu-box-title">Breakfast moments</div>
+              <p>Small details, soft light, and a simple buffet service create an inviting start.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ AMENITIES ══════════════════ -->
+<section id="amenities">
+  <div class="container">
+    <div class="am-head fade-in">
+      <span class="sec-label">Services</span>
+      <h2 class="sec-title">Amenities</h2>
+      <div class="divider c"></div>
+    </div>
+    <div class="am-grid">
+      <div class="am-item fade-in"><div class="am-icon"><i class="fas fa-ban"></i></div><div class="am-name">Animals not accepted</div></div>
+      <div class="am-item fade-in"><div class="am-icon"><i class="fas fa-square-parking"></i></div><div class="am-name">Private Parking</div></div>
+      <div class="am-item fade-in"><div class="am-icon"><i class="fas fa-concierge-bell"></i></div><div class="am-name">24h Reception</div></div>
+      <div class="am-item fade-in"><div class="am-icon"><i class="fas fa-utensils"></i></div><div class="am-name">Room Service</div></div>
+      <div class="am-item fade-in"><div class="am-icon"><i class="fas fa-wheelchair"></i></div><div class="am-name">PMR Access</div></div>
+      <div class="am-item fade-in"><div class="am-icon"><i class="fas fa-couch"></i></div><div class="am-name">Shared Lounge</div></div>
+      <div class="am-item fade-in"><div class="am-icon"><i class="fas fa-users"></i></div><div class="am-name">Family Rooms</div></div>
+      <div class="am-item fade-in"><div class="am-icon"><i class="fas fa-mug-hot"></i></div><div class="am-name">Breakfast Buffet</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ LIGHTBOX ══════════════════ -->
+<div id="lightbox">
+  <button class="lb-close" onclick="closeLb()"><i class="fas fa-times"></i></button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1)"><i class="fas fa-chevron-left"></i></button>
+  <img id="lbImg" src="" alt="Hotel Royal">
+  <button class="lb-nav lb-next" onclick="lbNav(1)"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<!-- ══════════════════ NEARBY ══════════════════ -->
+<section id="nearby">
+  <div class="container">
+    <div class="nb-head fade-in">
+      <span class="sec-label">Explore</span>
+      <h2 class="sec-title">Near the Hotel</h2>
+      <div class="divider c"></div>
+    </div>
+
+    <div class="nb-tabs">
+      <button class="nb-tab on" onclick="switchNb('attractions',this)">Attractions</button>
+      <button class="nb-tab"    onclick="switchNb('restaurants',this)">Restaurants</button>
+    </div>
+
+    <div class="nb-panel on" id="panel-attractions">
+      <div class="nb-grid">
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-chess-rook"></i></div><div class="nb-name">Château de Vincennes</div><div class="nb-desc">A historic royal fortress east of Paris, within easy reach for a refined cultural visit.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-church"></i></div><div class="nb-name">Notre-Dame de Paris</div><div class="nb-desc">The restored Gothic cathedral on the Île de la Cité, one of the capital's defining landmarks.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-place-of-worship"></i></div><div class="nb-name">Sacré-Cœur, Montmartre</div><div class="nb-desc">The luminous white basilica crowning Paris's most bohemian and artistic hill.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-landmark"></i></div><div class="nb-name">The Louvre Museum</div><div class="nb-desc">Home to the Mona Lisa and thousands of the world's greatest artistic treasures.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-monument"></i></div><div class="nb-name">Eiffel Tower</div><div class="nb-desc">Paris's eternal symbol — equally breathtaking against the daytime sky or sparkling at night.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-palette"></i></div><div class="nb-name">Musée d'Orsay</div><div class="nb-desc">The world's finest collection of Impressionist masterpieces, housed in a magnificent station.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-crown"></i></div><div class="nb-name">Palace of Versailles</div><div class="nb-desc">The Sun King's legendary palace and its magnificent formal gardens — a day well spent.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-music"></i></div><div class="nb-name">Bercy Arena</div><div class="nb-desc">Accor Arena — one of Europe's premier live music &amp; events venues, within easy reach from the hotel.</div></div>
+      </div>
+    </div>
+
+    <div class="nb-panel" id="panel-restaurants">
+      <div class="nb-grid">
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-fire-burner"></i></div><div class="nb-name">La Brochette Dorée</div><div class="nb-desc">Succulent grilled meats served in a warm, convivial neighbourhood atmosphere.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-fish"></i></div><div class="nb-name">Sushi Yumiko</div><div class="nb-desc">Fresh, expertly crafted Japanese cuisine — sushi, sashimi, and seasonal specialities.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-pizza-slice"></i></div><div class="nb-name">Woodiz Pizza</div><div class="nb-desc">Artisan wood-fired pizzas with quality toppings — perfect for dine-in or takeaway.</div></div>
+        <div class="nb-card fade-in"><div class="nb-icon"><i class="fas fa-pepper-hot"></i></div><div class="nb-name">Rana Restaurant</div><div class="nb-desc">Authentic, richly spiced Indian &amp; Pakistani cuisine — a beloved local institution.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ BOOKING ══════════════════ -->
+<section id="booking">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:4rem;" class="fade-in">
+      <span class="sec-label">Reservations</span>
+      <h2 class="sec-title">Book Your Stay</h2>
+      <div class="divider c"></div>
+      <p style="font-family:var(--fn);color:#8e867c;max-width:560px;margin:0 auto;font-size:0.95rem;line-height:1.9;">Complete the form below to reserve your room. We will confirm your booking by email within 2 hours.</p>
+    </div>
+
+    <div class="booking-wrap fade-in">
+
+      <!-- ── LEFT: FORM ── -->
+      <div>
+
+        <!-- Step 1: Dates -->
+        <div class="bk-step-label">Step 1 &nbsp;—&nbsp; Choose Your Dates</div>
+        <div class="bk-dates">
+          <div class="bk-field">
+            <label>Check-in</label>
+            <input type="date" id="bk-checkin" onchange="calcNights()">
+          </div>
+          <div class="bk-field">
+            <label>Check-out</label>
+            <input type="date" id="bk-checkout" onchange="calcNights()">
+          </div>
+          <div class="nights-box">
+            <span class="nights-num" id="bk-nights">—</span>
+            <span class="nights-lbl">Nights</span>
+          </div>
+        </div>
+
+        <!-- Step 2: Room Type -->
+        <div class="bk-step-label">Step 2 &nbsp;—&nbsp; Select Your Room</div>
+        <div class="room-picker" id="roomPicker">
+          <div class="rp-card selected" data-room="double" data-price="89" data-cap="2 Guests · 1 Dbl Bed" data-img="Photos/HotelRoyal-97.jpg" onclick="selectRoom(this)">
+            <div class="rp-check"><i class="fas fa-check"></i></div>
+            <img src="Photos/HotelRoyal-97.jpg" alt="Double Deluxe">
+            <div class="rp-info">
+              <div class="rp-name">Double Deluxe</div>
+              <div class="rp-cap">2 Guests &nbsp;·&nbsp; 1 Dbl Bed</div>
+              <div class="rp-price">€89 / night</div>
+            </div>
+          </div>
+          <div class="rp-card" data-room="twin" data-price="99" data-cap="2 Guests · 2 Twin Beds" data-img="Photos/HotelRoyal-150.jpg" onclick="selectRoom(this)">
+            <div class="rp-check"><i class="fas fa-check"></i></div>
+            <img src="Photos/HotelRoyal-150.jpg" alt="Twin Room">
+            <div class="rp-info">
+              <div class="rp-name">Twin Room</div>
+              <div class="rp-cap">2 Guests &nbsp;·&nbsp; 2 Twin Beds</div>
+              <div class="rp-price">€99 / night</div>
+            </div>
+          </div>
+          <div class="rp-card" data-room="triple" data-price="125" data-cap="3 Guests · 2 Twin + 1 Sgl" data-img="Photos/HotelRoyal-166.jpg" onclick="selectRoom(this)">
+            <div class="rp-check"><i class="fas fa-check"></i></div>
+            <img src="Photos/HotelRoyal-166.jpg" alt="Triple Room">
+            <div class="rp-info">
+              <div class="rp-name">Triple Room</div>
+              <div class="rp-cap">3 Guests &nbsp;·&nbsp; 2 Twin + 1 Sgl</div>
+              <div class="rp-price">€125 / night</div>
+            </div>
+          </div>
+          <div class="rp-card" data-room="suite" data-price="159" data-cap="4 Guests · 2 Dbl Beds" data-img="Photos/HotelRoyal-210.jpg" onclick="selectRoom(this)">
+            <div class="rp-check"><i class="fas fa-check"></i></div>
+            <img src="Photos/HotelRoyal-210.jpg" alt="Suite Deluxe">
+            <div class="rp-info">
+              <div class="rp-name">Suite Deluxe</div>
+              <div class="rp-cap">4 Guests &nbsp;·&nbsp; 2 Dbl Beds</div>
+              <div class="rp-price">€159 / night</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Guests -->
+        <div class="bk-step-label">Step 3 &nbsp;—&nbsp; Number of Guests</div>
+        <div class="bk-guests">
+          <div class="guest-counter">
+            <span class="gc-label">Adults</span>
+            <div class="gc-controls">
+              <button class="gc-btn" onclick="adjustGuest('adults',-1)">−</button>
+              <span class="gc-val" id="val-adults">1</span>
+              <button class="gc-btn" onclick="adjustGuest('adults',1)">+</button>
+            </div>
+          </div>
+          <div class="guest-counter">
+            <span class="gc-label">Children</span>
+            <div class="gc-controls">
+              <button class="gc-btn" onclick="adjustGuest('children',-1)">−</button>
+              <span class="gc-val" id="val-children">0</span>
+              <button class="gc-btn" onclick="adjustGuest('children',1)">+</button>
+            </div>
+          </div>
+          <div class="guest-counter">
+            <span class="gc-label">Rooms</span>
+            <div class="gc-controls">
+              <button class="gc-btn" onclick="adjustGuest('rooms',-1)">−</button>
+              <span class="gc-val" id="val-rooms">1</span>
+              <button class="gc-btn" onclick="adjustGuest('rooms',1)">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Extras -->
+        <div class="bk-step-label">Step 4 &nbsp;—&nbsp; Extras</div>
+        <div class="bk-extras">
+          <div class="extra-toggle" id="tog-breakfast" onclick="toggleExtra('breakfast')">
+            <div class="toggle-switch"></div>
+            <div class="extra-text">
+              <span class="extra-name">Breakfast Buffet</span>
+              <span class="extra-desc">€15 / adult &nbsp;·&nbsp; €7 / child &nbsp;·&nbsp; daily</span>
+            </div>
+          </div>
+          <div class="extra-toggle" id="tog-parking" onclick="toggleExtra('parking')">
+            <div class="toggle-switch"></div>
+            <div class="extra-text">
+              <span class="extra-name">Private Parking</span>
+              <span class="extra-desc">Secure indoor parking on site</span>
+            </div>
+          </div>
+          <div class="extra-toggle" id="tog-late" onclick="toggleExtra('late')">
+            <div class="toggle-switch"></div>
+            <div class="extra-text">
+              <span class="extra-name">Late Check-out</span>
+              <span class="extra-desc">€35 flat fee &nbsp;·&nbsp; extend your stay until 2:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5: Guest Details -->
+        <div class="bk-step-label">Step 5 &nbsp;—&nbsp; Your Details</div>
+        <div class="bk-details-grid">
+          <div class="bk-field">
+            <label>First Name</label>
+            <input type="text" id="bk-fname" placeholder="Jean" required>
+          </div>
+          <div class="bk-field">
+            <label>Last Name</label>
+            <input type="text" id="bk-lname" placeholder="Dupont" required>
+          </div>
+          <div class="bk-field">
+            <label>Email Address</label>
+            <input type="email" id="bk-email" placeholder="jean@example.com" required>
+          </div>
+          <div class="bk-field">
+            <label>Phone Number</label>
+            <input type="tel" id="bk-phone" placeholder="+33 ...">
+          </div>
+          <div class="bk-field">
+            <label>Country / Nationality</label>
+            <select id="bk-country">
+              <option value="">Select country…</option>
+              <option>France</option><option>United Kingdom</option><option>United States</option>
+              <option>Germany</option><option>Italy</option><option>Spain</option>
+              <option>Netherlands</option><option>Belgium</option><option>Switzerland</option>
+              <option>China</option><option>Japan</option><option>Russia</option>
+              <option>Brazil</option><option>Canada</option><option>Australia</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="bk-field">
+            <label>Estimated Arrival Time</label>
+            <select id="bk-arrival">
+              <option value="">Select time…</option>
+              <option>Before 12:00 PM</option><option>12:00 PM – 2:00 PM</option>
+              <option>2:00 PM – 4:00 PM</option><option>4:00 PM – 6:00 PM</option>
+              <option>6:00 PM – 8:00 PM</option><option>8:00 PM – 10:00 PM</option>
+              <option>After 10:00 PM</option>
+            </select>
+          </div>
+          <div class="bk-field full">
+            <label>Special Requests (optional)</label>
+            <textarea id="bk-requests" placeholder="e.g. ground floor room, baby cot, quiet room, anniversary decoration…"></textarea>
+          </div>
+        </div>
+
+      </div><!-- /left form -->
+
+      <!-- ── RIGHT: SUMMARY PANEL ── -->
+      <div class="booking-summary-panel">
+        <div class="bsp-title">Your Stay</div>
+        <div class="bsp-sub">Summary</div>
+
+        <img class="bsp-room-img" id="bsp-img" src="Photos/HotelRoyal-97.jpg" alt="Selected room">
+        <div class="bsp-room-name" id="bsp-room-name">Double Deluxe</div>
+
+        <div class="bsp-row">
+          <span class="bsp-row-label">Check-in</span>
+          <span class="bsp-row-val" id="bsp-cin">—</span>
+        </div>
+        <div class="bsp-row">
+          <span class="bsp-row-label">Check-out</span>
+          <span class="bsp-row-val" id="bsp-cout">—</span>
+        </div>
+        <div class="bsp-row">
+          <span class="bsp-row-label">Duration</span>
+          <span class="bsp-row-val" id="bsp-dur">—</span>
+        </div>
+        <div class="bsp-row">
+          <span class="bsp-row-label">Guests</span>
+          <span class="bsp-row-val" id="bsp-guests">1 adult</span>
+        </div>
+        <div class="bsp-row">
+          <span class="bsp-row-label">Rooms</span>
+          <span class="bsp-row-val" id="bsp-rooms-val">1</span>
+        </div>
+        <div class="bsp-row" id="bsp-breakfast-row" style="display:none">
+          <span class="bsp-row-label">Breakfast</span>
+          <span class="bsp-row-val" id="bsp-breakfast-val">—</span>
+        </div>
+        <div class="bsp-row" id="bsp-parking-row" style="display:none">
+          <span class="bsp-row-label">Parking</span>
+          <span class="bsp-row-val">Included</span>
+        </div>
+        <div class="bsp-row" id="bsp-late-row" style="display:none">
+          <span class="bsp-row-label">Late Check-out</span>
+          <span class="bsp-row-val">Until 2:00 PM</span>
+        </div>
+        <div class="bsp-row">
+          <span class="bsp-row-label">Room rate</span>
+          <span class="bsp-row-val" id="bsp-rate">€89 / night</span>
+        </div>
+
+        <div class="bsp-total">
+          <span class="bsp-total-label">Total</span>
+          <span class="bsp-total-val" id="bsp-total">€89</span>
+        </div>
+        <div class="bsp-tax-note">+ Tourist tax: €4.88 / person / night<br>payable at the hotel on arrival.</div>
+
+        <button class="bsp-submit" onclick="submitBooking()">Confirm Reservation</button>
+        <div class="bsp-note">Free cancellation up to 48h before arrival.<br>No credit card required to reserve.</div>
+      </div>
+
+    </div><!-- /booking-wrap -->
+  </div>
+</section>
+
+<!-- ── Booking Confirmation overlay ── -->
+<div id="bk-confirm">
+  <div class="bk-confirm-box">
+    <div class="bk-confirm-icon"><i class="fas fa-check"></i></div>
+    <h3>Reservation Received</h3>
+    <p>Thank you! Your booking request has been submitted.<br>We will confirm by email within 2 hours.</p>
+    <div class="bk-confirm-ref">Your reference number</div>
+    <div class="bk-confirm-num" id="bk-ref-num">HR-000000</div>
+    <br><br>
+    <button class="btn-gold" onclick="document.getElementById('bk-confirm').classList.remove('open')">Close</button>
+  </div>
+</div>
+
+<!-- ══════════════════ CONTACT ══════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="fade-in">
+        <span class="sec-label">Get in Touch</span>
+        <h2 class="sec-title">Contact Us</h2>
+        <div class="divider"></div>
+        <p style="font-family:var(--fg);font-size:1.15rem;line-height:1.75;color:#5e564d;max-width:520px;margin-bottom:2rem;">For reservations, arrival questions, or general information, our team is available to help by phone, email, or direct message.</p>
+
+        <div class="c-detail">
+          <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="c-text"><strong>Address</strong>80 Avenue Jean Jaurès<br>94200 Ivry-sur-Seine, France</div>
+        </div>
+        <div class="c-detail">
+          <div class="c-icon"><i class="fas fa-phone"></i></div>
+          <div class="c-text"><strong>Phone</strong><a href="tel:+33149600606">01 49 60 06 06</a></div>
+        </div>
+        <div class="c-detail">
+          <div class="c-icon"><i class="fas fa-envelope"></i></div>
+          <div class="c-text"><strong>Email</strong><a href="mailto:hotelroyal@hotelroyalparis.com">hotelroyal@hotelroyalparis.com</a></div>
+        </div>
+        <div class="c-detail">
+          <div class="c-icon"><i class="fas fa-clock"></i></div>
+          <div class="c-text"><strong>Front Desk</strong>Open 24 hours, 7 days a week</div>
+        </div>
+        <div class="c-detail">
+          <div class="c-icon"><i class="fas fa-globe"></i></div>
+          <div class="c-text"><strong>Website</strong><a href="https://www.hotelroyalparis.com" target="_blank">hotelroyalparis.com</a></div>
+        </div>
+
+        <div style="margin-top:0.5rem;">
+          <div style="font-family:var(--fn);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:#BBB;margin-bottom:0.8rem;">Follow Us</div>
+          <div class="socials">
+            <a class="soc-link" href="https://www.instagram.com/hotelroyalparis" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="soc-link" href="https://www.facebook.com/profile.php?id=61573454920950" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="soc-link" href="https://twitter.com/royal52245" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a class="soc-link" href="https://www.youtube.com/channel/UCPMntQ22XCzwFbo4IauRstQ" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-in">
+        <form class="contact-form" onsubmit="submitForm(event)">
+          <div style="margin-bottom:0.4rem;">
+            <span class="sec-label">Direct Enquiry</span>
+            <h3 style="font-family:var(--fs);font-size:2.5rem;line-height:1.05;color:var(--charcoal);margin-bottom:0.6rem;">Tell us about your stay</h3>
+            <p style="font-family:var(--fg);font-size:1rem;line-height:1.75;color:#6a645d;">Send us your dates, room questions, or special requests and we will get back to you as quickly as possible.</p>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Jean" required>
+            </div>
+            <div class="f-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Dupont" required>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label>Email</label>
+              <input type="email" placeholder="jean@example.com" required>
+            </div>
+            <div class="f-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="+33 ...">
+            </div>
+          </div>
+          <div class="f-group">
+            <label>Subject</label>
+            <select>
+              <option>Room Enquiry</option>
+              <option>Booking Assistance</option>
+              <option>Group Reservation</option>
+              <option>General Question</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us how we can help you…"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ GALLERY ══════════════════ -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-head fade-in">
+      <span class="sec-label">Visual Journey</span>
+      <h2 class="sec-title">A More Curated Gallery</h2>
+      <div class="divider c"></div>
+      <p style="font-family:var(--fn);color:#8e867c;max-width:560px;margin:0 auto;font-size:0.95rem;line-height:1.9;">A selection of interiors and hotel details that reflect the atmosphere of Hôtel Royal.</p>
+    </div>
+  </div>
+  <div id="galleryGrid"></div>
+</section>
+
+<!-- ══════════════════ LOCATION ══════════════════ -->
+<section id="location">
+  <div class="loc-inner">
+    <div class="loc-info fade-in">
+      <span class="sec-label">Find Us</span>
+      <h2 class="sec-title">Map &amp; Nearby Transport</h2>
+      <div class="divider"></div>
+      <p>Located in Ivry-sur-Seine on the edge of Paris, Hôtel Royal offers convenient access by bus, metro, and RER for both city visits and regional travel.</p>
+
+      <ul class="loc-list">
+        <li><i class="fas fa-map-marker-alt"></i><span>80 Avenue Jean Jaurès, 94200 Ivry-sur-Seine, France</span></li>
+        <li><i class="fas fa-phone"></i><span><a href="tel:+33149600606">01 49 60 06 06</a></span></li>
+        <li><i class="fas fa-envelope"></i><span><a href="mailto:hotelroyal@hotelroyalparis.com">hotelroyal@hotelroyalparis.com</a></span></li>
+        <li><i class="fas fa-route"></i><span>Access by Boulevard de Brandebourg, with quick links toward Bercy, central Paris, and the Seine-side roads.</span></li>
+      </ul>
+
+      <div class="transport">
+        <div class="t-item">
+          <div class="t-icon"><i class="fas fa-bus"></i></div>
+          <div class="t-text">
+            <strong>By Bd de Brandebourg</strong>
+            Bus lines 25 and 180 &nbsp;·&nbsp; approximately 1 minute on foot from the hotel.
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-icon"><i class="fas fa-subway"></i></div>
+          <div class="t-text">
+            <strong>Metro · Liberté</strong>
+            Line 8 &nbsp;·&nbsp; approximately 10 to 12 minutes by bus from the hotel.
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-icon"><i class="fas fa-train"></i></div>
+          <div class="t-text">
+            <strong>RER C · Ivry-sur-Seine</strong>
+            Approximately 1.1 km from the hotel, around 15 minutes on foot for central Paris and regional links.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.6!2d2.38906!3d48.8069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e672cd7faeffff%3A0x5b3c0e5a3e9b8b3a!2s80+Av.+Jean+Jaur%C3%A8s%2C+94200+Ivry-sur-Seine%2C+France!5e0!3m2!1sen!2sfr!4v1700000000000"
+        title="Hôtel Royal Location"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">
+          <span class="footer-logo-stars" aria-label="Three-star hotel">★★★</span>
+          <span class="footer-logo-name">Hôtel Royal</span>
+          <span class="footer-logo-place">
+            <span>Paris</span>
+            <span>Ivry</span>
+          </span>
+        </span>
+        <p>A 3-star hotel in Ivry-sur-Seine offering comfortable rooms, classic character, and practical access to Paris.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/hotelroyalparis" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61573454920950" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/royal52245" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.youtube.com/channel/UCPMntQ22XCzwFbo4IauRstQ" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About the Hotel</a></li>
+          <li><a href="#rooms">Rooms &amp; Suites</a></li>
+          <li><a href="#breakfast">Breakfast Buffet</a></li>
+          <li><a href="#gallery">Photo Gallery</a></li>
+          <li><a href="#location">Location &amp; Access</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Rooms</h4>
+        <ul>
+          <li><a href="#rooms">Double Deluxe</a></li>
+          <li><a href="#rooms">Twin Room</a></li>
+          <li><a href="#rooms">Triple Room</a></li>
+          <li><a href="#rooms">Suite Deluxe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>80 Avenue Jean Jaurès<br>94200 Ivry-sur-Seine<br>France<br><br>
+          <a href="tel:+33149600606">01 49 60 06 06</a><br>
+          <a href="mailto:hotelroyal@hotelroyalparis.com" style="font-size:0.74rem;">hotelroyal@hotelroyalparis.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Hôtel Royal Paris Ivry. All rights reserved.</p>
+      <div class="footer-langs">
+        <a href="#">EN</a><a href="#">FR</a><a href="#">ES</a><a href="#">IT</a>
+        <a href="#">DE</a><a href="#">中文</a><a href="#">RU</a><a href="#">NL</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════ SCRIPTS ══════════════════ -->
+<script>
+  /* ── Gallery Data (all 210 photos) ── */
+  const photos = [54, 80, 97, 150, 166, 172, 210, 1];
+
+  const BATCH = 8;
+  let loaded = 0;
+  let lbIdx  = 0;
+
+  function buildGallery() {
+    const grid = document.getElementById('galleryGrid');
+    const end  = Math.min(loaded + BATCH, photos.length);
+    for (let i = loaded; i < end; i++) {
+      const n  = photos[i];
+      const el = document.createElement('div');
+      el.className   = 'g-item fade-in';
+      el.dataset.idx = i;
+      el.innerHTML   = `<img src="Photos/HotelRoyal-${n}.jpg" alt="Hôtel Royal Paris — photo ${n}" loading="lazy"><div class="g-overlay"><i class="fas fa-expand"></i></div>`;
+      el.addEventListener('click', () => openLb(i));
+      grid.appendChild(el);
+    }
+    loaded = end;
+    const moreBtn = document.getElementById('loadMoreBtn');
+    if (loaded >= photos.length && moreBtn) moreBtn.style.display = 'none';
+    observeFade();
+  }
+
+  function loadMore() { buildGallery(); }
+
+  /* ── Lightbox ── */
+  function openLb(idx) {
+    lbIdx = idx;
+    document.getElementById('lbImg').src = `Photos/HotelRoyal-${photos[idx]}.jpg`;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLb() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function lbNav(dir) {
+    lbIdx = (lbIdx + dir + photos.length) % photos.length;
+    document.getElementById('lbImg').src = `Photos/HotelRoyal-${photos[lbIdx]}.jpg`;
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape')      closeLb();
+    if (e.key === 'ArrowRight')  lbNav(1);
+    if (e.key === 'ArrowLeft')   lbNav(-1);
+  });
+
+  /* ── Hero Slideshow ── */
+  const slides  = document.querySelectorAll('.h-slide');
+  const dotsWrap = document.getElementById('heroDots');
+  if (slides.length && dotsWrap) {
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'hdot' + (i === 0 ? ' on' : '');
+      d.onclick   = () => goSlide(i);
+      dotsWrap.appendChild(d);
+    });
+
+    const dots = () => document.querySelectorAll('.hdot');
+    let cur = 0;
+
+    function goSlide(n) {
+      slides[cur].classList.remove('on');
+      dots()[cur].classList.remove('on');
+      cur = n;
+      slides[cur].classList.add('on');
+      dots()[cur].classList.add('on');
+    }
+
+    setInterval(() => goSlide((cur + 1) % slides.length), 5500);
+  }
+
+  /* ── Navbar scroll ── */
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', scrollY > 70);
+  });
+
+  /* ── Mobile menu ── */
+  function toggleMenu() {
+    const m = document.getElementById('mobileMenu');
+    m.classList.toggle('open');
+    document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+  }
+
+  /* ── Fade-in observer ── */
+  function observeFade() {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('vis'), (i % 5) * 80);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in:not(.vis)').forEach(el => io.observe(el));
+  }
+
+  /* ── Nearby tabs ── */
+  function switchNb(panel, btn) {
+    document.querySelectorAll('.nb-tab').forEach(t  => t.classList.remove('on'));
+    document.querySelectorAll('.nb-panel').forEach(p => p.classList.remove('on'));
+    btn.classList.add('on');
+    document.getElementById('panel-' + panel).classList.add('on');
+  }
+
+  /* ── Contact form ── */
+  function submitForm(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit');
+    const orig = btn.textContent;
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = '#4a7c59';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.style.background = '';
+      btn.style.color = '';
+      e.target.reset();
+    }, 3500);
+  }
+
+  /* ── Init ── */
+  buildGallery();
+  observeFade();
+
+  /* ══════════════════════════════════════════
+     BOOKING ENGINE
+  ══════════════════════════════════════════ */
+  const guests   = { adults: 1, children: 0, rooms: 1 };
+  const extras   = { breakfast: false, parking: false, late: false };
+  let   roomPrice = 89;
+  let   nights    = 0;
+
+  // Set minimum date to today
+  (function() {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('bk-checkin').min  = today;
+    document.getElementById('bk-checkout').min = today;
+  })();
+
+  function calcNights() {
+    const ci = new Date(document.getElementById('bk-checkin').value);
+    const co = new Date(document.getElementById('bk-checkout').value);
+    if (!ci || !co || co <= ci) { nights = 0; document.getElementById('bk-nights').textContent = '—'; updateSummary(); return; }
+    nights = Math.round((co - ci) / 86400000);
+    document.getElementById('bk-nights').textContent = nights;
+    // Force checkout min = checkin + 1
+    const minCo = new Date(ci); minCo.setDate(minCo.getDate() + 1);
+    document.getElementById('bk-checkout').min = minCo.toISOString().split('T')[0];
+    updateSummary();
+  }
+
+  function selectRoom(card) {
+    document.querySelectorAll('.rp-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    roomPrice = parseInt(card.dataset.price);
+    document.getElementById('bsp-img').src          = card.dataset.img;
+    document.getElementById('bsp-room-name').textContent = card.querySelector('.rp-name').textContent;
+    document.getElementById('bsp-rate').textContent  = '€' + roomPrice + ' / night';
+    updateSummary();
+  }
+
+  function adjustGuest(type, dir) {
+    const limits = { adults: [1, 4], children: [0, 4], rooms: [1, 5] };
+    guests[type] = Math.min(limits[type][1], Math.max(limits[type][0], guests[type] + dir));
+    document.getElementById('val-' + type).textContent = guests[type];
+    updateSummary();
+  }
+
+  function toggleExtra(key) {
+    extras[key] = !extras[key];
+    document.getElementById('tog-' + key).classList.toggle('on', extras[key]);
+    updateSummary();
+  }
+
+  function formatDate(val) {
+    if (!val) return '—';
+    const d = new Date(val);
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function updateSummary() {
+    const cin  = document.getElementById('bk-checkin').value;
+    const cout = document.getElementById('bk-checkout').value;
+
+    document.getElementById('bsp-cin').textContent  = formatDate(cin);
+    document.getElementById('bsp-cout').textContent = formatDate(cout);
+    document.getElementById('bsp-dur').textContent  = nights ? nights + ' night' + (nights > 1 ? 's' : '') : '—';
+    document.getElementById('bsp-guests').textContent =
+      guests.adults + ' adult' + (guests.adults > 1 ? 's' : '') +
+      (guests.children ? ', ' + guests.children + ' child' + (guests.children > 1 ? 'ren' : '') : '');
+    document.getElementById('bsp-rooms-val').textContent = guests.rooms;
+
+    // Breakfast
+    const bfRow = document.getElementById('bsp-breakfast-row');
+    if (extras.breakfast && nights > 0) {
+      const bfCost = (guests.adults * 15 + guests.children * 7) * nights * guests.rooms;
+      document.getElementById('bsp-breakfast-val').textContent = '€' + bfCost;
+      bfRow.style.display = 'flex';
+    } else { bfRow.style.display = 'none'; }
+
+    // Parking & late check-out rows
+    document.getElementById('bsp-parking-row').style.display = extras.parking ? 'flex' : 'none';
+    document.getElementById('bsp-late-row').style.display    = extras.late    ? 'flex' : 'none';
+    if (extras.late) document.querySelector('#bsp-late-row .bsp-row-val').textContent = '€35 · until 2:00 PM';
+
+    // Total
+    let total = 0;
+    if (nights > 0) {
+      total = roomPrice * nights * guests.rooms;
+      if (extras.breakfast) total += (guests.adults * 15 + guests.children * 7) * nights * guests.rooms;
+    } else {
+      total = roomPrice * guests.rooms;
+    }
+    if (extras.late) total += 35;
+    document.getElementById('bsp-total').textContent = '€' + total.toLocaleString();
+  }
+
+  function submitBooking() {
+    const fname = document.getElementById('bk-fname').value.trim();
+    const lname = document.getElementById('bk-lname').value.trim();
+    const email = document.getElementById('bk-email').value.trim();
+    const cin   = document.getElementById('bk-checkin').value;
+    const cout  = document.getElementById('bk-checkout').value;
+    if (!fname || !lname || !email) { alert('Please fill in your name and email address.'); return; }
+    if (!cin || !cout) { alert('Please select your check-in and check-out dates.'); return; }
+    const ref = 'HR-' + Math.floor(100000 + Math.random() * 900000);
+    document.getElementById('bk-ref-num').textContent = ref;
+    document.getElementById('bk-confirm').classList.add('open');
+  }
+
+  // Init summary on load
+  updateSummary();
+</script>
+</body>
+</html>
